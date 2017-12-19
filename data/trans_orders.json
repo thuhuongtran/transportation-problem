@@ -1,0 +1,213 @@
+{
+  "ords":[
+    {
+      "num":1,
+      "oriName":"Đô thị Định Công, Định Công, Hoàng Mai, HN",
+      "oriLat":"20.9857814",
+      "oriLot":"105.8327653",
+      "desName":"Nha hang Tiệc cưới cung Đình, 85 Tôn Đức Thắng, Hàng Bột, Đống Đa, HN",
+      "desLat":"21.0253647",
+      "desLot": "105.8332973"
+    },
+    {
+      "num":2,
+      "oriName":"45 Ngô Sĩ Liên, Văn Miếu Đống Đa, HN",
+      "oriLat":"21.0271357",
+      "oriLot":"105.8393332",
+      "desName":"Tung Long Co.Ltd, 55 Ly Nam De, Hoan Kiem, HN",
+      "desLat":"21.032661",
+      "desLot": "105.8447848"
+    },
+    {
+      "num":3,
+      "oriName":"Vịt quay An Nam, 130 Trương Định, Hai Bà Trưng, Hn",
+      "oriLat":"20.992693",
+      "oriLot":"105.8496953",
+      "desName":"Ngõ 238, Tân Mai, Hoàng Mai, HN",
+      "desLat":"20.979500",
+      "desLot": "105.850780"
+    },
+    {
+      "num":4,
+      "oriName":"Sieu thi Ha Dang, Me tri, Nam Tu Liem, HN",
+      "oriLat":"20.995358",
+      "oriLot":"105.7845946",
+      "desName":"KFC, To Hieu, P. Nguyen Trai, Ha Dong, HN",
+      "desLat":"20.9685715",
+      "desLot": "105.7797771"
+    },
+    {
+      "num":5,
+      "oriName":"79b, pho Gia Quat, Thuong Thanh, Long Bien, Hn",
+      "oriLat":"21.0553007",
+      "oriLot":"105.8773542",
+      "desName":"Quan Oc phui, Hang Trong, Hoan Kiem, HN",
+      "desLat":"21.0287234",
+      "desLot": "105.8496317"
+    },
+    {
+      "num":6,
+      "oriName":"9 Dinh Ngang, Cua Nam, Hn",
+      "oriLat":"21.0283229",
+      "oriLot":"105.8427901",
+      "desName":"DH kiem sat Hn, Duong Kinh, Ha Dong, Hn",
+      "desLat":"20.9710905",
+      "desLot": "105.7485069"
+    },
+    {
+      "num":7,
+      "oriName":"Dong Nhan, Dong La, Hoai Duc,HN",
+      "oriLat":"20.9639914",
+      "oriLot":"105.7222787",
+      "desName":"72A1 Duong Nam Thanh Cong, Lang Ha, Dong Da, HN",
+      "desLat":"21.0187822",
+      "desLot": "105.809644"
+    },
+    {
+      "num":8,
+      "oriName":"Cty Quoc Huy, Tam Hiep, Thanh Tri, Hn",
+      "oriLat":"20.9496558",
+      "oriLot":"105.8413131",
+      "desName":"Cafe Gia Dinh, Ngoc Hoi, Thanh Tri, Hn",
+      "desLat":"20.9232668",
+      "desLot": "105.8341868"
+    },
+    {
+      "num":9,
+      "oriName":"Ca kho Vu Dai, Ngoc Hoi,Thanh Tri, Hn",
+      "oriLat":"20.9239655",
+      "oriLot":"105.8339645",
+      "desName":"133-135 To Hieu,Ha Cau, Ha Dong, Hn",
+      "desLat":"20.9666026",
+      "desLot": "105.7785264"
+    },
+    {
+      "num":10,
+      "oriName":"234 Hoang Quoc Viet, Co Nhue, Tu Liem, Hn",
+      "oriLat":"21.0465492",
+      "oriLot":"105.7823693",
+      "desName":"Nghia Do, Cau Giay, Hn",
+      "desLat":"21.0477467",
+      "desLot": "105.800241"
+    },
+    {
+      "num":11,
+      "oriName":"Cau Vong, Dong Ngac, Tu Nghiem, Hn",
+      "oriLat":"21.0772623",
+      "oriLot":"105.7718988",
+      "desName":"Long Troc Quan, 657 Nguyen Hoang Ton, Xuan Dinh, Tu Liem, Hn",
+      "desLat":"21.0778828",
+      "desLot": "105.79212"
+    },
+    {
+      "num":12,
+      "oriName":"So 7 Son Tay, Dien Ban, Ba Dinh, Hn",
+      "oriLat":"21.0330265",
+      "oriLot":"105.8329392",
+      "desName":"Cha Ca La Vong, 107 Nguyen Truong To, Quan Thanh, Ba Dinh, HN",
+      "desLat":"21.0414744",
+      "desLot": "105.8450603"
+    },
+    {
+      "num":13,
+      "oriName":"30 Lo Su, Ly Thai To, Hoan Kiem, Hn",
+      "oriLat":"21.0313596",
+      "oriLot":"105.8548224",
+      "desName":"Chung cu Linh Dam, Nguyen Duy Trinh, Hoang Liet, Hoang Mai, Hn",
+      "desLat":"20.9648506",
+      "desLot": "105.8313336"
+    },
+    {
+      "num":14,
+      "oriLat":"",
+      "oriLot":"",
+      "desLat":"",
+      "desLot": ""
+    },
+    {
+      "num":15,
+      "oriLat":"",
+      "oriLot":"",
+      "desLat":"",
+      "desLot": ""
+    },
+    {
+      "num":16,
+      "oriLat":"",
+      "oriLot":"",
+      "desLat":"",
+      "desLot": ""
+    },
+    {
+      "num":17,
+      "oriLat":"",
+      "oriLot":"",
+      "desLat":"",
+      "desLot": ""
+    },
+    {
+      "num":18,
+      "oriLat":"",
+      "oriLot":"",
+      "desLat":"",
+      "desLot": ""
+    },
+    {
+      "num":19,
+      "oriLat":"",
+      "oriLot":"",
+      "desLat":"",
+      "desLot": ""
+    },
+    {
+      "num":20,
+      "oriLat":"",
+      "oriLot":"",
+      "desLat":"",
+      "desLot": ""
+    },
+    {
+      "num":21,
+      "oriLat":"",
+      "oriLot":"",
+      "desLat":"",
+      "desLot": ""
+    },
+    {
+      "num":22,
+      "oriLat":"",
+      "oriLot":"",
+      "desLat":"",
+      "desLot": ""
+    },
+    {
+      "num":23,
+      "oriLat":"",
+      "oriLot":"",
+      "desLat":"",
+      "desLot": ""
+    },
+    {
+      "num":24,
+      "oriLat":"",
+      "oriLot":"",
+      "desLat":"",
+      "desLot": ""
+    },
+    {
+      "num":25,
+      "oriLat":"",
+      "oriLot":"",
+      "desLat":"",
+      "desLot": ""
+    },
+    {
+      "num":26,
+      "oriLat":"",
+      "oriLot":"",
+      "desLat":"",
+      "desLot": ""
+    }
+
+  ]
+}
