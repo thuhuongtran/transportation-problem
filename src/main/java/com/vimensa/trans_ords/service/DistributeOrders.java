@@ -1,7 +1,6 @@
 package com.vimensa.trans_ords.service;
 
 import com.vimensa.trans_ords.model.Distance;
-import com.vimensa.trans_ords.model.DistanceManager;
 import com.vimensa.trans_ords.model.Shipper;
 import com.vimensa.trans_ords.model.TransOrd;
 import okhttp3.OkHttpClient;
@@ -11,6 +10,8 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class DistributeOrders {
@@ -63,7 +64,32 @@ public class DistributeOrders {
     * params: lat and lot of origin point
     *         list of lat and lot of mul des points
     * */
-    public DistanceManager getDistanceMulPoints(String oriLot, String oriLat,String desCoorStr){
+    public List<Distance> getDistanceMulPoints(String oriLat, String oriLot,String desCoorStr) throws IOException {
+        DistributeOrders request = new DistributeOrders();
+        String url_request = "https://maps.googleapis.com/maps/api/distancematrix/json?&origins="+oriLat+"," +
+                oriLot+"&destinations="+desCoorStr+"&key="+API_KEY;
+        String response = request.run(url_request);
+        JSONObject distJson = new JSONObject(response);
+        JSONArray rowArr = (JSONArray) distJson.get("rows");
+        List<Distance> disLi = new ArrayList<Distance>();
+        JSONArray ele = rowArr.getJSONObject(0).getJSONArray("elements");
+        for(int i =0;i<ele.length();i++){
+            JSONObject distance = ele.getJSONObject(i).getJSONObject("distance");
+            String txtDis =  distance.get("text").toString();
+            String valueDis = distance.get("value").toString();
+            JSONObject duration = ele.getJSONObject(i).getJSONObject("duration");
+            String txtTime = duration.get("text").toString();
+            String valueTime = duration.get("value").toString();
+            Distance dis = new Distance(txtDis, valueDis, txtTime, valueTime);
+            disLi.add(dis);
+        }
+        return disLi;
+    }
+    /**
+    * get all of distance betwe all current working shippers and all destinations
+     * ---transLi and shipperLi are updated all the time
+    * */
+    public List<Distance> getAllDis(List<Shipper> shipperLi,List<TransOrd> transLi){
         return null;
     }
     /**
@@ -71,7 +97,7 @@ public class DistributeOrders {
      * param: list of shippers
      *        list of drivers
      * */
-    public void distributeOrders(Map<String,Shipper> shipperMap, Map<String, TransOrd> transOrdMap){
+    public void distributeOrders(List<Shipper> shipperLi, List<TransOrd> transLi){
 
     }
 

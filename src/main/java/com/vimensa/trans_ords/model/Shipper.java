@@ -45,12 +45,5 @@ public class Shipper {
         this.latitude = latitude;
     }
 
-    /**
-     * get coordinate in form = latitude + %2C( to distinguish with longitude ) + longitude
-     * used when call google map api
-     * */
-    public String getCoordinate(){
 
-        return getLatitude()+"%2C"+getLongitude();
-    }
 }
