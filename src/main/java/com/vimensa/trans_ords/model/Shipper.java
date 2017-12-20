@@ -6,6 +6,13 @@ public class Shipper {
     private String longitude;
     private String latitude;
 
+    public Shipper(String id, String name, String longitude, String latitude) {
+        this.id = id;
+        this.name = name;
+        this.longitude = longitude;
+        this.latitude = latitude;
+    }
+
     public String getId() {
         return id;
     }
@@ -44,6 +51,6 @@ public class Shipper {
      * */
     public String getCoordinate(){
 
-        return getLatitude()+"%2C-"+getLongitude();
+        return getLatitude()+"%2C"+getLongitude();
     }
 }
