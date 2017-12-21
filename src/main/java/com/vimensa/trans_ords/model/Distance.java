@@ -1,6 +1,7 @@
 package com.vimensa.trans_ords.model;
 
 public class Distance {
+    private String track;
     private String txtDis;
     private String valueDis;
     private String txtTime;
@@ -9,11 +10,20 @@ public class Distance {
     public Distance() {
     }
 
-    public Distance(String txtDis, String valueDis, String txtTime, String valueTime) {
+    public Distance(String track, String txtDis, String valueDis, String txtTime, String valueTime) {
+        this.track = track;
         this.txtDis = txtDis;
         this.valueDis = valueDis;
         this.txtTime = txtTime;
         this.valueTime = valueTime;
+    }
+
+    public String getTrack() {
+        return track;
+    }
+
+    public void setTrack(String track) {
+        this.track = track;
     }
 
     public String getTxtDis() {

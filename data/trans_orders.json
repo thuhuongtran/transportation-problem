@@ -1,7 +1,7 @@
 {
   "ords": [
     {
-      "num": 1,
+      "num": "O1",
       "oriName": "Đô thị Định Công, Định Công, Hoàng Mai, HN",
       "oriLat": "20.9857814",
       "oriLot": "105.8327653",
@@ -10,7 +10,7 @@
       "desLot": "105.8332973"
     },
     {
-      "num": 2,
+      "num": "O2",
       "oriName": "45 Ngô Sĩ Liên, Văn Miếu Đống Đa, HN",
       "oriLat": "21.0271357",
       "oriLot": "105.8393332",
@@ -19,7 +19,7 @@
       "desLot": "105.8447848"
     },
     {
-      "num": 3,
+      "num": "O3",
       "oriName": "Vịt quay An Nam, 130 Trương Định, Hai Bà Trưng, Hn",
       "oriLat": "20.992693",
       "oriLot": "105.8496953",
@@ -28,7 +28,7 @@
       "desLot": "105.850780"
     },
     {
-      "num": 4,
+      "num": "O4",
       "oriName": "Sieu thi Ha Dang, Me tri, Nam Tu Liem, HN",
       "oriLat": "20.995358",
       "oriLot": "105.7845946",
@@ -37,7 +37,7 @@
       "desLot": "105.7797771"
     },
     {
-      "num": 5,
+      "num": "O5",
       "oriName": "79b, pho Gia Quat, Thuong Thanh, Long Bien, Hn",
       "oriLat": "21.0553007",
       "oriLot": "105.8773542",
@@ -46,7 +46,7 @@
       "desLot": "105.8496317"
     },
     {
-      "num": 6,
+      "num": "O6",
       "oriName": "9 Dinh Ngang, Cua Nam, Hn",
       "oriLat": "21.0283229",
       "oriLot": "105.8427901",
@@ -55,7 +55,7 @@
       "desLot": "105.7485069"
     },
     {
-      "num": 7,
+      "num": "O7",
       "oriName": "Dong Nhan, Dong La, Hoai Duc,HN",
       "oriLat": "20.9639914",
       "oriLot": "105.7222787",
@@ -64,7 +64,7 @@
       "desLot": "105.809644"
     },
     {
-      "num": 8,
+      "num": "O8",
       "oriName": "Cty Quoc Huy, Tam Hiep, Thanh Tri, Hn",
       "oriLat": "20.9496558",
       "oriLot": "105.8413131",
@@ -73,7 +73,7 @@
       "desLot": "105.8341868"
     },
     {
-      "num": 9,
+      "num": "O9",
       "oriName": "Ca kho Vu Dai, Ngoc Hoi,Thanh Tri, Hn",
       "oriLat": "20.9239655",
       "oriLot": "105.8339645",
@@ -82,7 +82,7 @@
       "desLot": "105.7785264"
     },
     {
-      "num": 10,
+      "num": "O10",
       "oriName": "234 Hoang Quoc Viet, Co Nhue, Tu Liem, Hn",
       "oriLat": "21.0465492",
       "oriLot": "105.7823693",
@@ -91,7 +91,7 @@
       "desLot": "105.800241"
     },
     {
-      "num": 11,
+      "num": "O11",
       "oriName": "Cau Vong, Dong Ngac, Tu Nghiem, Hn",
       "oriLat": "21.0772623",
       "oriLot": "105.7718988",
@@ -100,7 +100,7 @@
       "desLot": "105.79212"
     },
     {
-      "num": 12,
+      "num": "O12",
       "oriName": "So 7 Son Tay, Dien Ban, Ba Dinh, Hn",
       "oriLat": "21.0330265",
       "oriLot": "105.8329392",
@@ -109,7 +109,7 @@
       "desLot": "105.8450603"
     },
     {
-      "num": 13,
+      "num": "O13",
       "oriName": "30 Lo Su, Ly Thai To, Hoan Kiem, Hn",
       "oriLat": "21.0313596",
       "oriLot": "105.8548224",
@@ -118,7 +118,7 @@
       "desLot": "105.8313336"
     },
     {
-      "num": 14,
+      "num": "O14",
       "oriName": "Cha Ca La Vong, 107 Nguyen Truong To, Quan Thanh, Ba Dinh, HN",
       "oriLat": "21.0414744",
       "oriLot": "105.8450603",
@@ -127,7 +127,7 @@
       "desLot": "105.7485069"
     },
     {
-      "num": 15,
+      "num": "O15",
       "oriName": "Ngõ 238, Tân Mai, Hoàng Mai, HN",
       "oriLat": "20.979500",
       "oriLot": "105.850780",
@@ -136,7 +136,7 @@
       "desLot": "105.8001542"
     },
     {
-      "num": 16,
+      "num": "O16",
       "oriName": "Vong La, Dong Anh, Hn",
       "oriLat": "21.1107264",
       "oriLot": "105.781135",
@@ -145,7 +145,7 @@
       "desLot": "105.8447063"
     },
     {
-      "num": 17,
+      "num": "O17",
       "oriName": "O Nhuan,Xuan Dinh,Tu Liem,Hn",
       "oriLat": "21.0684833",
       "oriLot": "105.7857594",
@@ -154,7 +154,7 @@
       "desLot": "105.7860488"
     },
     {
-      "num": 18,
+      "num": "O18",
       "oriName": "Quan Hoa, Cau Giay,Hn",
       "oriLat": "21.0399138",
       "oriLot": "105.8005432",
@@ -163,7 +163,7 @@
       "desLot": "105.8292408"
     },
     {
-      "num": 19,
+      "num": "O19",
       "oriName": "O Cho Dua, Dong Da, Hn",
       "oriLat": "21.0193442",
       "oriLot": "105.8217342",
@@ -172,7 +172,7 @@
       "desLot": "105.788726"
     },
     {
-      "num": 20,
+      "num": "O20",
       "oriName": "Van Phu, Thuong Tin, Hn",
       "oriLat": "20.8799738",
       "oriLot": "105.8794402",
@@ -181,7 +181,7 @@
       "desLot": "105.9481936"
     },
     {
-      "num": 21,
+      "num": "O21",
       "oriName": "Dinh Cong,Hoang Mai, Hn",
       "oriLat": "20.9848383",
       "oriLot": "105.8265851",
@@ -190,7 +190,7 @@
       "desLot": "105.8392084"
     },
     {
-      "num": 22,
+      "num": "O22",
       "oriName": "16 Ngo Hang Bot, Phuong Cat linh, Hn",
       "oriLat": "21.0291064",
       "oriLot": "105.8342839",
@@ -199,7 +199,7 @@
       "desLot": "105.8561511"
     },
     {
-      "num": 23,
+      "num": "O23",
       "oriName": "P. Long Bien, Long Bien, Hn",
       "oriLat": "21.0240197",
       "oriLot": "105.8787244",
@@ -208,7 +208,7 @@
       "desLot": "105.7722861"
     },
     {
-      "num": 24,
+      "num": "O24",
       "oriName": "Khuong Trung, Thanh Xuan, hn",
       "oriLat": "20.9963952",
       "oriLot": "105.8220664",
@@ -217,7 +217,7 @@
       "desLot": "105.7729941"
     },
     {
-      "num": 25,
+      "num": "O25",
       "oriName":"Dai Thanh, Quoc Oai,Hn",
       "oriLat": "20.9617695",
       "oriLot": "105.7093862",
@@ -226,7 +226,7 @@
       "desLot": "105.8496953"
     },
     {
-      "num": 26,
+      "num": "O26",
       "oriName":"Nha hang Tiệc cưới cung Đình, 85 Tôn Đức Thắng, Hàng Bột, Đống Đa, HN",
       "oriLat": "21.0253647",
       "oriLot": "105.8332973",

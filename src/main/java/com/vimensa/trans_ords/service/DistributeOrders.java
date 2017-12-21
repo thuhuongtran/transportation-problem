@@ -1,8 +1,6 @@
 package com.vimensa.trans_ords.service;
 
-import com.vimensa.trans_ords.model.Distance;
-import com.vimensa.trans_ords.model.Shipper;
-import com.vimensa.trans_ords.model.TransOrd;
+import com.vimensa.trans_ords.model.*;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -37,7 +35,7 @@ public class DistributeOrders {
     *
     * */
 
-    public Distance getDistanceTwoPoints(String oriLat, String oriLot, String desLat, String desLot) throws IOException {
+    public Distance getDistanceTwoPoints(String track,String oriLat, String oriLot, String desLat, String desLot) throws IOException {
         DistributeOrders request = new DistributeOrders();
         String url_request = "https://maps.googleapis.com/maps/api/distancematrix/json?&origins="+oriLat+"," +
                 oriLot+"&destinations="+desLat+"%2C"+desLot+"&key="+API_KEY;
@@ -54,7 +52,7 @@ public class DistributeOrders {
             JSONObject duration = ele.getJSONObject(i).getJSONObject("duration");
             String txtTime = duration.get("text").toString();
             String valueTime = duration.get("value").toString();
-            dis = new Distance(txtDis, valueDis, txtTime, valueTime);
+            dis = new Distance(track,txtDis, valueDis, txtTime, valueTime);
         }
         return dis;
 
@@ -64,11 +62,47 @@ public class DistributeOrders {
     * params: lat and lot of origin point
     *         list of lat and lot of mul des points
     * */
-    public List<Distance> getDistanceMulPoints(String oriLat, String oriLot,String desCoorStr) throws IOException {
+//
+//    public List<Distance> getDistanceMulPoints(String oriLat, String oriLot,String desCoorStr) throws IOException {
+//        DistributeOrders request = new DistributeOrders();
+//        String url_request = "https://maps.googleapis.com/maps/api/distancematrix/json?&origins="+oriLat+"," +
+//                oriLot+"&destinations="+desCoorStr+"&key="+API_KEY;
+//        String response = request.run(url_request);
+//        JSONObject distJson = new JSONObject(response);
+//        JSONArray rowArr = (JSONArray) distJson.get("rows");
+//        List<Distance> disLi = new ArrayList<Distance>();
+//        JSONArray ele = rowArr.getJSONObject(0).getJSONArray("elements");
+//        for(int i =0;i<ele.length();i++){
+//            JSONObject distance = ele.getJSONObject(i).getJSONObject("distance");
+//            String txtDis =  distance.get("text").toString();
+//            String valueDis = distance.get("value").toString();
+//            JSONObject duration = ele.getJSONObject(i).getJSONObject("duration");
+//            String txtTime = duration.get("text").toString();
+//            String valueTime = duration.get("value").toString();
+//            Distance dis = new Distance(txtDis, valueDis, txtTime, valueTime);
+//            disLi.add(dis);
+//        }
+//        return disLi;
+//    }
+    /**
+    * get all of distance betwe all current working shippers and all destinations
+     * ---transLi and shipperLi are updated all the time
+    * */
+    public List<Distance> getAllShipperLocToOrdDesDis(List<Shipper> shipperLi,List<TransOrd> transLi) throws IOException {
+        TransOrdManager transMang = new TransOrdManager();
+        ShipperManager shipperMang = new ShipperManager();
+        String desCoorStr = transMang.getOriCoordLi(transLi);
+        String shipperLoc = shipperMang.getShipperLocationLi(shipperLi);
+
         DistributeOrders request = new DistributeOrders();
-        String url_request = "https://maps.googleapis.com/maps/api/distancematrix/json?&origins="+oriLat+"," +
-                oriLot+"&destinations="+desCoorStr+"&key="+API_KEY;
+//        String url_request = "https://maps.googleapis.com/maps/api/distancematrix/json?&origins="+shipperLoc+
+//                "&destinations="+desCoorStr;
+        String url_request = "https://maps.googleapis.com/maps/api/distancematrix/json?&origins=" +
+                "21.0000281%2C105.9072344%7C20.9980975%2C105.8752846%7C21.0000281%2C105.9072344" +
+                "&destinations="+desCoorStr;
+//        System.out.println(url_request);
         String response = request.run(url_request);
+//        System.out.println(response);
         JSONObject distJson = new JSONObject(response);
         JSONArray rowArr = (JSONArray) distJson.get("rows");
         List<Distance> disLi = new ArrayList<Distance>();
@@ -84,13 +118,6 @@ public class DistributeOrders {
             disLi.add(dis);
         }
         return disLi;
-    }
-    /**
-    * get all of distance betwe all current working shippers and all destinations
-     * ---transLi and shipperLi are updated all the time
-    * */
-    public List<Distance> getAllDis(List<Shipper> shipperLi,List<TransOrd> transLi){
-        return null;
     }
     /**
      * distribute orders to shippers

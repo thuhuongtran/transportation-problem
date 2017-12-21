@@ -11,10 +11,10 @@ import java.util.List;
 
 public class ShippersConfig {
     public static final String TRANS_ORDS_FILE = "data/drivers.json";
-    public static List<Shipper> orders = new ArrayList<Shipper>();
+    public static List<Shipper> shippers = new ArrayList<Shipper>();
 
     public static JsonObject config;
-    public static void getOrders(){
+    public static void getShippers(){
         initJson();
         JsonArray arr = config.getAsJsonArray("shippers");
         for(int i=0;i<arr.size();i++){
@@ -25,7 +25,7 @@ public class ShippersConfig {
             String lot = obj.get("longitude").getAsString();
 
             Shipper shipper = new Shipper(id, name, lot, lat);
-            orders.add(shipper);
+            shippers.add(shipper);
         }
 
     }

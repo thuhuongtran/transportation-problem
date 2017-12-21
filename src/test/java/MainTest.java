@@ -1,5 +1,7 @@
 import com.vimensa.trans_ords.data_config.OrdersConfig;
+import com.vimensa.trans_ords.data_config.ShippersConfig;
 import com.vimensa.trans_ords.model.Distance;
+import com.vimensa.trans_ords.model.ShipperManager;
 import com.vimensa.trans_ords.model.TransOrdManager;
 import com.vimensa.trans_ords.service.DistributeOrders;
 import okhttp3.OkHttpClient;
@@ -95,16 +97,19 @@ public class MainTest {
 //        distributeOrders.getDistanceTwoPoints("20.9963952","105.8220664","20.9876666","105.7729941");
 //
         OrdersConfig.getOrders();
-        TransOrdManager transOrdManager = new TransOrdManager();
+//        TransOrdManager transOrdManager = new TransOrdManager();
+        ShippersConfig.getShippers();
+//        System.out.println(transOrdManager.getOriCoordLi(OrdersConfig.orders));
+        ShipperManager shipMan = new ShipperManager();
+        System.out.println(shipMan.getShipperLocationLi(ShippersConfig.shippers));
 
-        System.out.println(transOrdManager.getOriCoordLi(OrdersConfig.orders));
-
-
-        List<Distance> disLi = distributeOrders.getDistanceMulPoints("21.0000281","105.9072344",
-                transOrdManager.getOriCoordLi(OrdersConfig.orders));
+        List<Distance> disLi = distributeOrders.getAllShipperLocToOrdDesDis(ShippersConfig.shippers, OrdersConfig.orders);
+//        List<Distance> disLi = distributeOrders.getDistanceMulPoints("20.9980975","105.8752846",transOrdManager.getOriCoordLi(OrdersConfig.orders));
 
         for(Distance dis: disLi){
             System.out.println(dis.getTxtDis()+" "+dis.getValueDis()+" "+dis.getTxtTime()+" "+dis.getValueTime());
         }
     }
+
+
 }
