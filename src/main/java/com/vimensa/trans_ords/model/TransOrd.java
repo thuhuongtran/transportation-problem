@@ -76,18 +76,4 @@ public class TransOrd {
         this.desLatitude = desLatitude;
     }
 
-    /**
-     * get origin coordinate in form = latitude %2C + longitude
-     * */
-    public String getOriginCoord(){
-        return getOriginLatitude()+"%2C"+getOriginLongitude();
-    }
-
-    /**
-     * get destination coordinate in form = latitude %2C + longitude
-     * */
-    public String getDesCoord(){
-        return getDesLatitude()+"%2C"+getDesLongitude();
-    }
-
 }
