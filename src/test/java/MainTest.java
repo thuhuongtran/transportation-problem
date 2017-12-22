@@ -1,23 +1,23 @@
-import com.vimensa.trans_ords.data_config.OrdersConfig;
-import com.vimensa.trans_ords.data_config.ShippersConfig;
-import com.vimensa.trans_ords.model.Distance;
-import com.vimensa.trans_ords.model.ShipperManager;
-import com.vimensa.trans_ords.service.DistributeOrders;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.maps.GeoApiContext;
+import com.google.maps.GeocodingApi;
+import com.google.maps.errors.ApiException;
+import com.google.maps.model.GeocodingResult;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
 import java.io.IOException;
-import java.util.List;
 
 
 /*
-* Note: can khoanh vung shipper and transOrd theo province. Ex:  shippers in HN, HCM,...
-*                                                                orders in HN, HCM,...
-* */
+ * Note: can khoanh vung shipper and transOrd theo province. Ex:  shippers in HN, HCM,...
+ *                                                                orders in HN, HCM,...
+ * */
 public class MainTest {
     private static final String API_KEY = "AIzaSyD56CRrDR98aaz9A1WMokw6siT0u0iiyts";
-
+    //    private static final String API_KEY = "AIzaFakeKey";
     OkHttpClient client = new OkHttpClient();
 
     public String run(String url) throws IOException {
@@ -86,25 +86,33 @@ public class MainTest {
 
     //https://www.google.com/maps/dir/20.9991883,105.8462537/21.0026339,105.8563817/@20.9836422,105.862819,14z
 
-
-    public static void main(String[] args) throws IOException {
-
-        DistributeOrders distributeOrders = new DistributeOrders();
-//        distributeOrders.getDistanceTwoPoints("20.9963952","105.8220664","20.9876666","105.7729941");
+    //
+//    public static void main(String[] args) throws IOException {
 //
-        OrdersConfig.getOrders();
-//        TransOrdManager transOrdManager = new TransOrdManager();
-        ShippersConfig.getShippers();
-//        System.out.println(transOrdManager.getOriCoordLi(OrdersConfig.orders));
-        ShipperManager shipMan = new ShipperManager();
-        System.out.println(shipMan.getShipperLocationLi(ShippersConfig.shippers));
-
-        List<Distance> disLi = distributeOrders.getAllShipperLocToOrdDesDis(ShippersConfig.shippers, OrdersConfig.orders);
-//        List<Distance> disLi = distributeOrders.getDistanceMulPoints("20.9980975","105.8752846",transOrdManager.getOriCoordLi(OrdersConfig.orders));
-
-        for(Distance dis: disLi){
-            System.out.println(dis.getTxtDis()+" "+dis.getValueDis()+" "+dis.getTxtTime()+" "+dis.getValueTime());
-        }
+//        DistributeOrders distributeOrders = new DistributeOrders();
+////        distributeOrders.getDistanceTwoPoints("20.9963952","105.8220664","20.9876666","105.7729941");
+////
+//        OrdersConfig.getOrders();
+////        TransOrdManager transOrdManager = new TransOrdManager();
+//        ShippersConfig.getShippers();
+////        System.out.println(transOrdManager.getOriCoordLi(OrdersConfig.orders));
+//        ShipperManager shipMan = new ShipperManager();
+//        System.out.println(shipMan.getShipperLocationLi(ShippersConfig.shippers));
+//
+//        List<Distance> disLi = distributeOrders.getAllShipperLocToOrdDesDis(ShippersConfig.shippers, OrdersConfig.orders);
+////        List<Distance> disLi = distributeOrders.getDistanceMulPoints("20.9980975","105.8752846",transOrdManager.getOriCoordLi(OrdersConfig.orders));
+//
+//        for(Distance dis: disLi){
+//            System.out.println(dis.getTxtDis()+" "+dis.getValueDis()+" "+dis.getTxtTime()+" "+dis.getValueTime());
+//        }
+    public static void main(String[] args) throws InterruptedException, ApiException, IOException {
+        GeoApiContext context = new GeoApiContext.Builder()
+                .apiKey("AIza...")
+                .build();
+        GeocodingResult[] results = GeocodingApi.geocode(context,
+                "1600 Amphitheatre Parkway Mountain View, CA 94043").await();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        System.out.println(gson.toJson(results[0].addressComponents));
     }
 
 

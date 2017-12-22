@@ -18,6 +18,13 @@ public class Distance {
         this.valueTime = valueTime;
     }
 
+    public Distance(String txtDis, String valueDis, String txtTime, String valueTime) {
+        this.txtDis = txtDis;
+        this.valueDis = valueDis;
+        this.txtTime = txtTime;
+        this.valueTime = valueTime;
+    }
+
     public String getTrack() {
         return track;
     }

@@ -1,6 +1,5 @@
 package com.vimensa.trans_ords.service;
 
-import com.trans_ords.model.*;
 import com.vimensa.trans_ords.model.*;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -95,14 +94,16 @@ public class DistributeOrders {
         String shipperLoc = shipperMang.getShipperLocationLi(shipperLi);
 
         DistributeOrders request = new DistributeOrders();
-//        String url_request = "https://maps.googleapis.com/maps/api/distancematrix/json?&origins="+shipperLoc+
+        String url_request = "https://maps.googleapis.com/maps/api/distancematrix/json?&origins="+shipperLoc+
+                "&destinations="+desCoorStr+"&key="+API_KEY;
+//        String url_request = "https://vimensa.maps.com/maps/api/distancematrix/json?&origins="+shipperLoc+
 //                "&destinations="+desCoorStr;
-        String url_request = "https://maps.googleapis.com/maps/api/distancematrix/json?&origins=" +
-                "21.0000281%2C105.9072344%7C20.9980975%2C105.8752846%7C21.0000281%2C105.9072344" +
-                "&destinations="+desCoorStr;
+//        String url_request = "https://maps.googleapis.com/maps/api/distancematrix/json?&origins=" +
+//                "21.0000281%2C105.9072344%7C20.9980975%2C105.8752846%7C21.0000281%2C105.9072344" +
+//                "&destinations="+desCoorStr;
 //        System.out.println(url_request);
         String response = request.run(url_request);
-//        System.out.println(response);
+        System.out.println(response);
         JSONObject distJson = new JSONObject(response);
         JSONArray rowArr = (JSONArray) distJson.get("rows");
         List<Distance> disLi = new ArrayList<Distance>();
