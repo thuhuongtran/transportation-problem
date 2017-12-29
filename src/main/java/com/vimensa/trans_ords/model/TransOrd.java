@@ -3,14 +3,14 @@ package com.vimensa.trans_ords.model;
 public class TransOrd {
     private String id;
     private String oriName;
-    private String originLongitude;
-    private String originLatitude;
+    private double originLongitude;
+    private double originLatitude;
     private String desName;
-    private String desLongitude;
-    private String desLatitude;
+    private double desLongitude;
+    private double desLatitude;
 
-    public TransOrd(String id, String oriName, String originLongitude, String originLatitude,
-                    String desName, String desLongitude, String desLatitude) {
+    public TransOrd(String id, String oriName, double originLongitude,
+                    double originLatitude, String desName, double desLongitude, double desLatitude) {
         this.id = id;
         this.oriName = oriName;
         this.originLongitude = originLongitude;
@@ -28,14 +28,6 @@ public class TransOrd {
         this.oriName = oriName;
     }
 
-    public String getDesName() {
-        return desName;
-    }
-
-    public void setDesName(String desName) {
-        this.desName = desName;
-    }
-
     public String getId() {
         return id;
     }
@@ -44,36 +36,43 @@ public class TransOrd {
         this.id = id;
     }
 
-    public String getOriginLongitude() {
+    public double getOriginLongitude() {
         return originLongitude;
     }
 
-    public void setOriginLongitude(String originLongitude) {
+    public void setOriginLongitude(double originLongitude) {
         this.originLongitude = originLongitude;
     }
 
-    public String getOriginLatitude() {
+    public double getOriginLatitude() {
         return originLatitude;
     }
 
-    public void setOriginLatitude(String originLatitude) {
+    public void setOriginLatitude(double originLatitude) {
         this.originLatitude = originLatitude;
     }
 
-    public String getDesLongitude() {
+    public String getDesName() {
+        return desName;
+    }
+
+    public void setDesName(String desName) {
+        this.desName = desName;
+    }
+
+    public double getDesLongitude() {
         return desLongitude;
     }
 
-    public void setDesLongitude(String desLongitude) {
+    public void setDesLongitude(double desLongitude) {
         this.desLongitude = desLongitude;
     }
 
-    public String getDesLatitude() {
+    public double getDesLatitude() {
         return desLatitude;
     }
 
-    public void setDesLatitude(String desLatitude) {
+    public void setDesLatitude(double desLatitude) {
         this.desLatitude = desLatitude;
     }
-
 }

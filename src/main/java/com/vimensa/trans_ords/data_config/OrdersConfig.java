@@ -21,11 +21,11 @@ public class OrdersConfig {
             JsonObject obj = arr.get(i).getAsJsonObject();
             String id = obj.get("num").getAsString();
             String oriName = obj.get("oriName").getAsString();
-            String oriLat = obj.get("oriLat").getAsString();
-            String oriLot = obj.get("oriLot").getAsString();
-            String desName = obj.get("desName").getAsString();
-            String desLat = obj.get("desLat").getAsString();
-            String desLot = obj.get("desLot").getAsString();
+            double oriLat =  Double.valueOf(obj.get("oriLat").getAsString());
+            double oriLot =  Double.valueOf(obj.get("oriLot").getAsString());
+            String desName =  obj.get("desName").getAsString();
+            double desLat =  Double.valueOf(obj.get("desLat").getAsString());
+            double desLot = Double.valueOf(obj.get("desLot").getAsString());
             TransOrd transOrd = new TransOrd(id, oriName, oriLot, oriLat, desName, desLot, desLat);
             orders.add(transOrd);
          }

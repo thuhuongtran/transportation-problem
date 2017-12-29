@@ -24,7 +24,7 @@ public class ShippersConfig {
             String lat = obj.get("latitude").getAsString();
             String lot = obj.get("longitude").getAsString();
 
-            Shipper shipper = new Shipper(id, name, lot, lat);
+            Shipper shipper = new Shipper(id, name, Double.valueOf(lot), Double.valueOf(lat));
             shippers.add(shipper);
         }
 

@@ -3,10 +3,10 @@ package com.vimensa.trans_ords.model;
 public class Shipper {
     private String id;
     private String name;
-    private String longitude;
-    private String latitude;
+    private double longitude;
+    private double latitude;
 
-    public Shipper(String id, String name, String longitude, String latitude) {
+    public Shipper(String id, String name, double longitude, double latitude) {
         this.id = id;
         this.name = name;
         this.longitude = longitude;
@@ -29,21 +29,19 @@ public class Shipper {
         this.name = name;
     }
 
-    public String getLongitude() {
+    public double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(String longitude) {
+    public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
 
-    public String getLatitude() {
+    public double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(String latitude) {
+    public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
-
-
 }
