@@ -1,2 +1,4 @@
 # transportation-problem
-Develope transportation problem algorithsm. 
+Target: get nearest driver to origin of order.
+Algorithm: Use Kd_tree
+
