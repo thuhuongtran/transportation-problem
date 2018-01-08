@@ -1,20 +1,20 @@
-package com.vimensa.trans_ords.data_config;
+package com.vimensa.fashivi.data;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.vimensa.trans_ords.model.Shipper;
+import com.vimensa.fashivi.model.Driver;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShippersConfig {
-    public static final String TRANS_ORDS_FILE = "data/drivers.json";
-    public static List<Shipper> shippers = new ArrayList<Shipper>();
+public class DriverData {
+    public static final String DRIVERS_FILE = "data/drivers.json";
+    public static List<Driver> drivers = new ArrayList<>();
 
     public static JsonObject config;
-    public static void getShippers(){
+    public static void getDrivers(){
         initJson();
         JsonArray arr = config.getAsJsonArray("shippers");
         for(int i=0;i<arr.size();i++){
@@ -24,13 +24,13 @@ public class ShippersConfig {
             String lat = obj.get("latitude").getAsString();
             String lot = obj.get("longitude").getAsString();
 
-            Shipper shipper = new Shipper(id, name, lot, lat);
-            shippers.add(shipper);
+            Driver driver = new Driver(id, Double.valueOf(lot), Double.valueOf(lat));
+            drivers.add(driver);
         }
 
     }
     private static void initJson(){
-        File file = new File(TRANS_ORDS_FILE);
+        File file = new File(DRIVERS_FILE);
         StringBuffer contents = new StringBuffer();
         BufferedReader reader = null;
         try {

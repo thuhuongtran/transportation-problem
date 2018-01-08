@@ -1,36 +1,39 @@
-package com.vimensa.trans_ords.data_config;
+package com.vimensa.fashivi.data;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.vimensa.trans_ords.model.Shipper;
+import com.vimensa.fashivi.model.Order;
+import com.vimensa.trans_ords.ggl_api.model.TransOrd;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShippersConfig {
-    public static final String TRANS_ORDS_FILE = "data/drivers.json";
-    public static List<Shipper> shippers = new ArrayList<Shipper>();
+public class OrdersData {
+    public static final String ORDERS_FILE = "data/orders.json";
+    public static List<Order> orders = new ArrayList<>();
 
     public static JsonObject config;
-    public static void getShippers(){
+    public static void getOrders(){
         initJson();
-        JsonArray arr = config.getAsJsonArray("shippers");
+        JsonArray arr = config.getAsJsonArray("ords");
         for(int i=0;i<arr.size();i++){
             JsonObject obj = arr.get(i).getAsJsonObject();
             String id = obj.get("num").getAsString();
-            String name = obj.get("name").getAsString();
-            String lat = obj.get("latitude").getAsString();
-            String lot = obj.get("longitude").getAsString();
-
-            Shipper shipper = new Shipper(id, name, lot, lat);
-            shippers.add(shipper);
-        }
+            String oriName = obj.get("oriName").getAsString();
+            double oriLat =  Double.valueOf(obj.get("oriLat").getAsString());
+            double oriLot =  Double.valueOf(obj.get("oriLot").getAsString());
+            String desName =  obj.get("desName").getAsString();
+            double desLat =  Double.valueOf(obj.get("desLat").getAsString());
+            double desLot = Double.valueOf(obj.get("desLot").getAsString());
+            Order order = new Order(id,oriLat,oriLot,desLat,desLot);
+            orders.add(order);
+         }
 
     }
     private static void initJson(){
-        File file = new File(TRANS_ORDS_FILE);
+        File file = new File(ORDERS_FILE);
         StringBuffer contents = new StringBuffer();
         BufferedReader reader = null;
         try {

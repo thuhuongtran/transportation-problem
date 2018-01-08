@@ -3,14 +3,14 @@ package com.vimensa.trans_ords.model;
 public class TransOrd {
     private String id;
     private String oriName;
-    private double originLongitude;
-    private double originLatitude;
+    private String originLongitude;
+    private String originLatitude;
     private String desName;
-    private double desLongitude;
-    private double desLatitude;
+    private String desLongitude;
+    private String desLatitude;
 
-    public TransOrd(String id, String oriName, double originLongitude,
-                    double originLatitude, String desName, double desLongitude, double desLatitude) {
+    public TransOrd(String id, String oriName, String originLongitude, String originLatitude,
+                    String desName, String desLongitude, String desLatitude) {
         this.id = id;
         this.oriName = oriName;
         this.originLongitude = originLongitude;
@@ -28,30 +28,6 @@ public class TransOrd {
         this.oriName = oriName;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public double getOriginLongitude() {
-        return originLongitude;
-    }
-
-    public void setOriginLongitude(double originLongitude) {
-        this.originLongitude = originLongitude;
-    }
-
-    public double getOriginLatitude() {
-        return originLatitude;
-    }
-
-    public void setOriginLatitude(double originLatitude) {
-        this.originLatitude = originLatitude;
-    }
-
     public String getDesName() {
         return desName;
     }
@@ -60,19 +36,44 @@ public class TransOrd {
         this.desName = desName;
     }
 
-    public double getDesLongitude() {
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getOriginLongitude() {
+        return originLongitude;
+    }
+
+    public void setOriginLongitude(String originLongitude) {
+        this.originLongitude = originLongitude;
+    }
+
+    public String getOriginLatitude() {
+        return originLatitude;
+    }
+
+    public void setOriginLatitude(String originLatitude) {
+        this.originLatitude = originLatitude;
+    }
+
+    public String getDesLongitude() {
         return desLongitude;
     }
 
-    public void setDesLongitude(double desLongitude) {
+    public void setDesLongitude(String desLongitude) {
         this.desLongitude = desLongitude;
     }
 
-    public double getDesLatitude() {
+    public String getDesLatitude() {
         return desLatitude;
     }
 
-    public void setDesLatitude(double desLatitude) {
+    public void setDesLatitude(String desLatitude) {
         this.desLatitude = desLatitude;
     }
+
 }
