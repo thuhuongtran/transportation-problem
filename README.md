@@ -1,2 +1,2 @@
 # transportation-problem
-Develope transportation problem algorithsm. 
+Developed transportation problem algorithms.
